@@ -12,6 +12,9 @@ import Input from './components/input';
 import Counter from './components/state/counter';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import Box from './components/context/box';
+import { UserContext,UserContextProvider } from './components/context/UserContext';
+import User from './components/context/user';
+
 
 function App() {
   const personName = {
@@ -29,11 +32,11 @@ function App() {
      {/* <Greet name={"Prince"}  isLoggedIn={true}/> */}
      {/* <Person name={personName}/> */}
      {/* <PersonList names={nameList}/> */}
-     <Status status={"loading"}/>
+     {/* <Status status={"loading"}/>
      <Heading>Placed Order</Heading>
      <Oscar>
       <Heading>Oscar goes to leonanrdo decaprio</Heading>
-     </Oscar>
+     </Oscar> */}
 
      {/* <Button hanndleClick={(event)=>console.log('event')}/> */}
       {/* <Input value='' handleChange={(event)=>console.log(event)}/> */}
@@ -42,6 +45,9 @@ function App() {
       {/* <ThemeContextProvider>
         <Box/>
       </ThemeContextProvider> */}
+      <UserContextProvider>
+      <User/>
+      </UserContextProvider>
     
     </div>
   );
